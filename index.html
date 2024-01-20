@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html>
+	<head>
+	<meta name="viewport" content="width=device-width, initial-scale=1">
+	<meta charset="UTF-8"/>
+	<link rel="stylesheet" href="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.css">
+
+	<script src="https://code.jquery.com/jquery-3.6.4.min.js"></script>
+	<script src="http://code.jquery.com/mobile/1.4.5/jquery.mobile-1.4.5.min.js"></script>
+		<style>
+			html, body {
+				margin: 0;
+				padding: 0!important;
+			}
+			.cycle {
+				background-image: url(pan_font_passavets.jpg);
+				height: 512px;
+				cursor: move;
+			}
+			.ui-content { 
+  				padding: 0 !important;
+			}
+			.centerText{
+				text-align: center;
+			}
+		</style>
+	</head>
+	<body>
+
+		<div data-role="page">
+
+		<div data-role="main" class="ui-content">
+			<h2 class="centerText">Panoramic view of the Font de Passavents</h2>
+			<div class="cycle"></div>
+			<p class="centerText">Move the image horizontally</p>
+		</div>
+
+		</div> 
+			<script  src="mobile-cyclotron.js"></script>
+			<script>
+				$(document).ready(function ($) {
+					$('.cycle').cyclotron();
+				});
+			</script>
+	</body>
+</html>
